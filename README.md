@@ -1,52 +1,32 @@
-Vaadin 8 Example
-================
+Данное вэб-приложение отображает решение двух задач(их условия будут ниже), веб приложение с GUI реализовано на Vaadin 8.
 
-Template for a simple Vaadin application that only requires a Servlet 3.0 container to run.
+GUI включает в себя:
+- Поле ввода условий,
+- Поле вывода результата,
+- Combobox с выбором задачи,
+- Кнопки: Посчитать, Сохранить, Загрузить.
 
+При нажатии на «Посчитать»: выполняет решение в зависимости от выбранной задачи и вводных данных.
+При нажатии на «Сохранить»: сохраняет в текстовый файл данные из поля выбора задачи, ввода и вывода.
+При нажатии на «Загрузить»: вызывает диалоговое окно с выбором файла и при выборе загружает данные в поле ввода.
 
-Workflow
-========
+Задача №1
+Даны два массива строк a1 и a2. В результате должны вернуть массив строк из a1, которые являются подстроками элементов массива a2. На выходе не должно быть повторяющихся элементов.
+Пример 1: 
+a1 = "arp", "live", "strong"
+a2 = "lively", "alive", "harp", "sharp", "armstrong"
+Результат = "arp", "live", "strong"
+Пример 2: 
+a1 = "tarp", "mice", "bull"
+a2 = "lively", "alive", "harp", "sharp", "armstrong"
+Результат = []
 
-To compile the entire project, run "mvn install".
+Задача №2
+Запись номера в развернутом виде.
+Вам будет дан номер, который нужно будет вернуть в виде строки в развернутой форме.
+Примеры:
+Дано: 250, Результат: 200+50
+Дано: 21, Результат: 20+1
+Дано: 90502, Результат: 90000+500+2
 
 To run the application, run "mvn jetty:run" and open http://localhost:8080/ .
-
-To produce a deployable production mode WAR:
-- change productionMode to true in the servlet class configuration (nested in the UI class)
-- run "mvn clean package"
-- test the war file with "mvn jetty:run-war"
-
-Client-Side compilation
--------------------------
-
-The generated maven project is using an automatically generated widgetset by default. 
-When you add a dependency that needs client-side compilation, the maven plugin will 
-automatically generate it for you. Your own client-side customizations can be added into
-package "client".
-
-Debugging client side code
-  - run "mvn vaadin:run-codeserver" on a separate console while the application is running
-  - activate Super Dev Mode in the debug window of the application
-
-Developing a theme using the runtime compiler
--------------------------
-
-When developing the theme, Vaadin can be configured to compile the SASS based
-theme at runtime in the server. This way you can just modify the scss files in
-your IDE and reload the browser to see changes.
-
-To use the runtime compilation, open pom.xml and comment out the compile-theme 
-goal from vaadin-maven-plugin configuration. To remove a possibly existing 
-pre-compiled theme, run "mvn clean package" once.
-
-When using the runtime compiler, running the application in the "run" mode 
-(rather than in "debug" mode) can speed up consecutive theme compilations
-significantly.
-
-It is highly recommended to disable runtime compilation for production WAR files.
-
-Using Vaadin pre-releases
--------------------------
-
-If Vaadin pre-releases are not enabled by default, use the Maven parameter
-"-P vaadin-prerelease" or change the activation default value of the profile in pom.xml .
