@@ -46,5 +46,5 @@ a2 = "lively", "alive", "harp", "sharp", "armstrong"
 
 Дано: 90502, Результат: 90000+500+2
 
-
+===
 To run the application, run "mvn jetty:run" and open http://localhost:8080/ .
