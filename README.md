@@ -18,11 +18,11 @@ GUI включает в себя:
 
 Пример 1: 
 
-a1 = "arp", "live", "strong"
-a2 = "lively", "alive", "harp", "sharp", "armstrong"
-Результат = "arp", "live", "strong"
-Пример 2: 
-a1 = "tarp", "mice", "bull"
+a1 = "arp", "live", "strong"\n
+a2 = "lively", "alive", "harp", "sharp", "armstrong"\n
+Результат = "arp", "live", "strong"\n
+Пример 2: \n
+a1 = "tarp", "mice", "bull"\n
 a2 = "lively", "alive", "harp", "sharp", "armstrong"
 Результат = []
 
