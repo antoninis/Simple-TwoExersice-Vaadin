@@ -18,20 +18,33 @@ GUI включает в себя:
 
 Пример 1: 
 
-a1 = "arp", "live", "strong"\n
-a2 = "lively", "alive", "harp", "sharp", "armstrong"\n
-Результат = "arp", "live", "strong"\n
-Пример 2: \n
-a1 = "tarp", "mice", "bull"\n
+a1 = "arp", "live", "strong"
+
 a2 = "lively", "alive", "harp", "sharp", "armstrong"
+
+Результат = "arp", "live", "strong"
+
+Пример 2: 
+
+a1 = "tarp", "mice", "bull"
+
+a2 = "lively", "alive", "harp", "sharp", "armstrong"
+
 Результат = []
 
 Задача №2
+
 Запись номера в развернутом виде.
+
 Вам будет дан номер, который нужно будет вернуть в виде строки в развернутой форме.
+
 Примеры:
+
 Дано: 250, Результат: 200+50
+
 Дано: 21, Результат: 20+1
+
 Дано: 90502, Результат: 90000+500+2
+
 
 To run the application, run "mvn jetty:run" and open http://localhost:8080/ .
